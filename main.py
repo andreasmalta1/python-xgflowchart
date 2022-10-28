@@ -68,8 +68,12 @@ def create_flowchart(xg_data):
 	plt.xlabel('Minute')
 	plt.xlabel('xG')
 
-	ax.step(x=xg_data['h_min'], y=xg_data['h_cumulative'])
-	ax.step(x=xg_data['a_min'], y=xg_data['a_cumulative'])
+	ax.step(x=xg_data['h_min'], y=xg_data['h_cumulative'], label=xg_data['h_team'], linewidth=3)
+	ax.step(x=xg_data['a_min'], y=xg_data['a_cumulative'], label=xg_data['a_team'], linewidth=3)
+	legend = plt.legend(loc="upper left",)
+	frame = legend.get_frame()
+	frame.set_facecolor('#3D4849')
+	frame.set_edgecolor('#3D4849')
 
 	ax.set_ylim(ymin=0)
 	ax.set_xlim(xmin=0, xmax=90)
@@ -77,8 +81,7 @@ def create_flowchart(xg_data):
 
 	# Show goals
 	# Arrange colours (hmmm)
-	# Until 90
-
+	# Thicken line
 
 
 def main():
