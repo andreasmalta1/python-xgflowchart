@@ -70,6 +70,9 @@ def create_flowchart(xg_data):
 
 	ax.step(x=xg_data['h_min'], y=xg_data['h_cumulative'])
 	ax.step(x=xg_data['a_min'], y=xg_data['a_cumulative'])
+
+	ax.set_ylim(ymin=0)
+	ax.set_xlim(xmin=0, xmax=90)
 	plt.show()
 
 	# Show goals
