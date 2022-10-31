@@ -91,7 +91,7 @@ def create_flowchart(xg_data):
 			print('GOAL')
 			print(xg_data['h_xg'][count])
 			print(xg_data['h_min'][count])
-    	# plt.annotate(y1_plot[i], (x1[i], y1[i]),c='black',size=12,ha='center',va='center',fontweight='bold')
+			# ax.annotate(y1_plot[i], (x1[i], y1[i]),c='black',size=12,ha='center',va='center',fontweight='bold')
 
 	ax.set_ylim(ymin=0)
 	ax.set_xlim(xmin=0, xmax=90)
@@ -101,6 +101,8 @@ def create_flowchart(xg_data):
 	# Arrange colours (hmmm)
 	# show score v xg score
 	# show score, scorer and xg for goal
+	# save image
+	# google search - how to make tablue visuals using python
 
 
 def main():
